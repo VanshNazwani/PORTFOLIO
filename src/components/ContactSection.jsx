@@ -47,63 +47,67 @@ export const ContactSection = () => {
               {" "}
               Contact Information
             </h3>
+<div className="space-y-6 text-left">
+  {/* The outer div is now a standard block container, allowing default left alignment 
+      and vertical stacking provided by space-y-6. */}
+  
+  {/* 1. Email Item */}
+  <div className="flex items-start space-x-4">
+    <div className="p-3 rounded-full bg-primary/10">
+      <Mail className="h-6 w-6 text-primary" />{" "}
+    </div>
+    <div>
+      <h4 className="font-medium">Email:</h4>
+      <a
+        href="mailto:nazwaniv@gmail.com"
+        className="text-muted-foreground hover:text-primary transition-colors"
+      >
+        nazwaniv@gmail.com
+      </a>
+    </div>
+  </div>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
-                  <a
-                    href="mailto:hello@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    hello@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
-                  <a
-                    href="tel:+11234567890"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +1 (123) 456-7890
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
-                  </a>
-                </div>
-              </div>
-            </div>
+  {/* 2. Phone Item */}
+  <div className="flex items-start space-x-4">
+    <div className="p-3 rounded-full bg-primary/10">
+      <Phone className="h-6 w-6 text-primary" />{" "}
+    </div>
+    <div>
+      <h4 className="font-medium">Phone:</h4>
+      <a
+        href="tel:+919675914307"
+        className="text-muted-foreground hover:text-primary transition-colors"
+      >
+        +91 9675914307
+      </a>
+    </div>
+  </div>
+
+  {/* 3. Location Item */}
+  <div className="flex items-start space-x-4">
+    <div className="p-3 rounded-full bg-primary/10">
+      <MapPin className="h-6 w-6 text-primary" />{" "}
+    </div>
+    <div>
+      <h4 className="font-medium">Location:</h4>
+      <a className="text-muted-foreground hover:text-primary transition-colors">
+        Greater Noida
+      </a>
+    </div>
+  </div>
+</div>
 
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/vanshnazwani?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHSJcVKYYS5GFAUFdj5xd%2FQ%3D%3D" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://x.com/VanshNazwa27968" target="_blank">
                   <Twitter />
                 </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/ig_vansh2005/" target="_blank">
                   <Instagram />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitch />
                 </a>
               </div>
             </div>
@@ -121,7 +125,7 @@ export const ContactSection = () => {
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
+                 
                   Your Name
                 </label>
                 <input
@@ -130,7 +134,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="Vansh Nazwani..."
                 />
               </div>
 
@@ -139,7 +143,7 @@ export const ContactSection = () => {
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
+                 
                   Your Email
                 </label>
                 <input
@@ -148,7 +152,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="nazwaniv@gmail.com"
                 />
               </div>
 
