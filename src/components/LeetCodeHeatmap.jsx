@@ -1,9 +1,10 @@
-// src/components/LeetCodeHeatmap.jsx
-export const LeetCodeHeatmap = ({ username = "vanshnazwani4705", refreshIntervalMs = 0 }) => {
-  // refreshIntervalMs: if >0, the component will re-render the img src at that interval (ms)
-  const srcBase = `https://leetcard.jacoblin.cool/${username}?theme=transparent&font=ABeeZee&ext=heatmap`;
+import React from "react";
 
-  // build src with timestamp query param to avoid caching
+export const LeetCodeHeatmap = ({ username = "vanshnazwani4705", refreshIntervalMs = 0 }) => {
+  // Base URL for LeetCode heatmap
+  const srcBase = `https://leetcard.jacoblin.cool/${username}?theme=dark&font=ABeeZee&ext=heatmap`;
+
+  // Timestamp for avoiding cache refresh
   const [ts, setTs] = React.useState(Date.now());
   React.useEffect(() => {
     if (refreshIntervalMs > 0) {
@@ -15,22 +16,26 @@ export const LeetCodeHeatmap = ({ username = "vanshnazwani4705", refreshInterval
   const src = `${srcBase}&t=${ts}`;
 
   return (
-    <section id="leetcode" className="py-12 px-4">
+    <section id="leetcode" className="py-16 px-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          My <span className="text-primary">LeetCode</span> Heatmap
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          My <span className="text-yellow-400">LeetCode</span> Heatmap
         </h2>
-        <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-          Live-updating heatmap (refreshes when the page loads, and optionally every few minutes).
+        <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+          Live-updating heatmap of my LeetCode activity.
         </p>
 
         <div className="flex justify-center">
-          <img
-            src={src}
-            alt={`LeetCode heatmap for ${username}`}
-            className="w-full max-w-3xl rounded-lg shadow-md"
-            style={{ height: "auto" }}
-          />
+          <div className="relative w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden border-2 border-yellow-400 hover:scale-105 transition-transform duration-300 mb-16">
+            {/* Semi-transparent overlay */}
+            <div className="absolute inset-0 bg-black/30 z-10"></div>
+            <img
+              src={src}
+              alt={`LeetCode heatmap for ${username}`}
+              className="w-full h-auto relative z-20"
+              style={{ filter: "contrast(1.2) brightness(1.1)" }}
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -8,6 +8,8 @@ import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { Certifications } from "../components/Certifications";
+import { Experience } from "../components/Experience";
 
 export const Home = () => {
   // Refresh LeetCode data automatically every 30 minutes
@@ -34,7 +36,7 @@ export const Home = () => {
         <HeroSection />
         <AboutSection />
 
-        {/* ✅ LeetCode Heatmap Section */}
+        {/*  LeetCode Heatmap Section */}
         <section
           id="leetcode"
           className="py-20 px-4 text-center bg-secondary/40 rounded-xl mx-auto max-w-6xl my-12 shadow-lg"
@@ -58,6 +60,8 @@ export const Home = () => {
 
         <SkillsSection />
         <ProjectsSection />
+        <Experience />
+        <Certifications />
         <ContactSection />
       </main>
 
