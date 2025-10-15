@@ -39,17 +39,17 @@
 }
 
 @layer base {
-  /* Light Theme – Colorful Pastel */
+  /* Even Darker Light Theme – Highly Readable */
   :root {
-    --background: 210 80% 95%;        /* soft sky blue */
-    --foreground: 220 15% 15%;        /* dark text */
-    --card: 45 100% 98%;               /* pale yellow */
-    --primary: 290 70% 60%;            /* vibrant purple */
-    --primary-foreground: 0 0% 100%;   /* white text on primary */
-    --border: 250 50% 80%;             /* soft purple border */
+    --background: 210 45% 65%;        /* darker soft blue */
+    --foreground: 220 25% 15%;        /* dark text for strong contrast */
+    --card: 45 70% 75%;               /* darker pale yellow for cards */
+    --primary: 290 60% 50%;           /* deep vibrant purple for accents */
+    --primary-foreground: 0 0% 100%;  /* white text on primary */
+    --border: 250 40% 60%;            /* darker purple border */
   }
 
-  /* Dark Theme – Contrasting */
+  /* Dark Theme – unchanged */
   .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
