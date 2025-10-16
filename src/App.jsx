@@ -4,6 +4,7 @@ import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
 import { LeetCodeHeatmap } from "./components/LeetCodeHeatmap";
 
+
 function App() {
   return (
     <>

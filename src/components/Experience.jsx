@@ -3,16 +3,11 @@ import React from "react";
 export const Experience = () => {
   const experiences = [
     {
-      role: "Frontend Developer",
-      company: "ABC Tech Solutions",
-      duration: "Jan 2022 - Present",
-      description: "Developed and maintained websites using React and TailwindCSS.",
-    },
-    {
-      role: "Intern - Web Development",
-      company: "XYZ Company",
-      duration: "Jun 2021 - Dec 2021",
-      description: "Worked on building responsive UI components and integrating APIs.",
+      role: "Fresher",
+      company: "Open to Opportunities",
+      duration: "Present",
+      description:
+        "As a recent graduate, I’m eager to apply my knowledge of web development, React, and Node.js in a professional setting. I’ve built multiple academic and personal projects showcasing skills in frontend and backend development.",
     },
   ];
 
@@ -23,15 +18,21 @@ export const Experience = () => {
           My <span className="text-primary-foreground">Work Experience</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex flex-col items-center">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="exp-card bg-card rounded-xl shadow-lg p-6 mb-8 mx-auto max-w-md transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl"
+              className="exp-card bg-card rounded-xl shadow-lg p-8 mb-8 w-full max-w-3xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl text-left"
             >
-              <h3 className="text-xl font-semibold mb-2 text-foreground">{exp.role}</h3>
-              <p className="company text-primary-foreground font-medium mb-1">{exp.company} | {exp.duration}</p>
-              <p className="text-foreground/80">{exp.description}</p>
+              <h3 className="text-2xl font-semibold mb-2 text-foreground">
+                {exp.role}
+              </h3>
+              <p className="text-primary-foreground font-medium mb-2">
+                {exp.company} | {exp.duration}
+              </p>
+              <p className="text-foreground/80 leading-relaxed">
+                {exp.description}
+              </p>
             </div>
           ))}
         </div>

@@ -1,10 +1,8 @@
 import React from "react";
 
 export const LeetCodeHeatmap = ({ username = "vanshnazwani4705", refreshIntervalMs = 0 }) => {
-  // Base URL for LeetCode heatmap
   const srcBase = `https://leetcard.jacoblin.cool/${username}?theme=dark&font=ABeeZee&ext=heatmap`;
 
-  // Timestamp for avoiding cache refresh
   const [ts, setTs] = React.useState(Date.now());
   React.useEffect(() => {
     if (refreshIntervalMs > 0) {
@@ -27,7 +25,6 @@ export const LeetCodeHeatmap = ({ username = "vanshnazwani4705", refreshInterval
 
         <div className="flex justify-center">
           <div className="relative w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden border-2 border-yellow-400 hover:scale-105 transition-transform duration-300 mb-16">
-            {/* Semi-transparent overlay */}
             <div className="absolute inset-0 bg-black/30 z-10"></div>
             <img
               src={src}
