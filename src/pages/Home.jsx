@@ -16,7 +16,7 @@ export const Home = () => {
   const [timestamp, setTimestamp] = useState(Date.now());
 
   useEffect(() => {
-    const interval = setInterval(() => setTimestamp(Date.now()), 100000); 
+    const interval = setInterval(() => setTimestamp(Date.now()), 50000); 
     return () => clearInterval(interval);
   }, []);
 
