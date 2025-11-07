@@ -3,50 +3,34 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: "HTML/CSS", icon: "🌐", category: "frontend" },
+  { name: "JavaScript", icon: "📜", category: "frontend" },
+  { name: "React", icon: "⚛️", category: "frontend" },
+  { name: "TypeScript", icon: "📘", category: "frontend" },
+  { name: "Tailwind CSS", icon: "🎨", category: "frontend" },
+  { name: "Next.js", icon: "⚡", category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  { name: "Node.js", icon: "🟢", category: "backend" },
+  { name: "Express", icon: "🚂", category: "backend" },
+  { name: "MongoDB", icon: "🍃", category: "backend" },
+  { name: "PostgreSQL", icon: "🐘", category: "backend" },
+  { name: "GraphQL", icon: "📊", category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Git/GitHub", icon: "📚", category: "tools" },
+  { name: "Docker", icon: "🐳", category: "tools" },
+  { name: "Figma", icon: "🎯", category: "tools" },
+  { name: "VS Code", icon: "💻", category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [animatedLevels, setAnimatedLevels] = useState({});
-
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
-
-  // Animate skill levels
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const newLevels = {};
-      filteredSkills.forEach(skill => {
-        const current = animatedLevels[skill.name] || 0;
-        newLevels[skill.name] = current < skill.level ? current + 1 : skill.level;
-      });
-      setAnimatedLevels(newLevels);
-    }, 10);
-
-    return () => clearInterval(interval);
-  }, [filteredSkills, animatedLevels]);
 
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
@@ -78,23 +62,11 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover hover:shadow-lg transition-shadow duration-300"
+              className="bg-card p-6 rounded-lg shadow-xs card-hover hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary/10"
             >
-              <div className="text-left mb-4">
+              <div className="flex items-center justify-between mb-2">
                 <h3 className="font-semibold text-lg">{skill.name}</h3>
-              </div>
-
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left transition-all duration-700"
-                  style={{ width: `${animatedLevels[skill.name] || 0}%` }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {animatedLevels[skill.name] || 0}%
-                </span>
+                <span className="text-2xl">{skill.icon}</span>
               </div>
             </div>
           ))}
