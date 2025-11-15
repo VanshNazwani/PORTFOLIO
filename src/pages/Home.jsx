@@ -10,35 +10,29 @@ import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { Certifications } from "../components/Certifications";
 import { Experience } from "../components/Experience";
+import LeetcodeHeatmap from "../components/LeetcodeHeatmap";
 
 export const Home = () => {
-
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
-      {/* Theme Toggle */}
       <ThemeToggle />
-
-      {/* Background Effects */}
       <StarBackground />
-
-      {/* Navbar */}
       <Navbar />
 
-      {/* Main Content */}
       <main>
         <HeroSection />
         <AboutSection />
+        <SkillsSection />
 
-  <SkillsSection />
+        {/* LeetCode Heatmap */}
+        <LeetcodeHeatmap />
 
-  {/* LeetCode / activity heatmap removed */}
         <ProjectsSection />
         <Experience />
         <Certifications />
         <ContactSection />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

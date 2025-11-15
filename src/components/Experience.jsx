@@ -3,12 +3,15 @@ import React from "react";
 export const Experience = () => {
   const experiences = [
     {
-      role: "Fresher",
-      company: "Open to Opportunities",
-      duration: "Present",
+      role: "Web Development Intern",
+      company: "Insight Quest Tech",
+      duration: "October 2025 – November 2025",
       description:
-        "As a recent graduate, I’m eager to apply my knowledge of web development, React, and Node.js in a professional setting. I’ve built multiple academic and personal projects showcasing skills in frontend and backend development.",
+        "Completed a hands-on internship focused on building and improving web applications using modern technologies such as React.js, Node.js, and MongoDB. Contributed to frontend design, responsive layouts, and backend integration. Gained practical exposure to software development workflows and team collaboration.",
+      certificateLink:
+        "https://www.linkedin.com/posts/vanshnazwani_hello-connections-lll-thrilled-to-share-activity-7393903264854888448-wrSF",
     },
+   
   ];
 
   return (
@@ -30,9 +33,19 @@ export const Experience = () => {
               <p className="text-primary-foreground font-medium mb-2">
                 {exp.company} | {exp.duration}
               </p>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed mb-3">
                 {exp.description}
               </p>
+              {exp.certificateLink && (
+                <a
+                  href={exp.certificateLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  View Certificate
+                </a>
+              )}
             </div>
           ))}
         </div>
