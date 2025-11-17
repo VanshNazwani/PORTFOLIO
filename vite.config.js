@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/PORTFOLIO/",       // THIS MUST WORK
+  base: "/",       // THIS MUST WORK
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
