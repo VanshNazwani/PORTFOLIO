@@ -1,6 +1,6 @@
 import React from "react";
 
-const DEFAULT_USERNAME = "vanshnazwani4705";
+const DEFAULT_USERNAME = "loneprogammer272";
 
 export default function LeetcodeHeatmap({ username = DEFAULT_USERNAME }) {
   const heatmapSrc = `https://leetcard.jacoblin.cool/${encodeURIComponent(
