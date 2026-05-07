@@ -38,30 +38,24 @@ export const AboutSection = () => {
           {/* About text */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Full Stack MERN Developer & Cloud Consultant
             </h3>
 
             <p className="text-muted-foreground">
-I am a Full Stack Developer specializing in building efficient, scalable, and user-friendly web applications. With expertise in React, Node.js, and modern web technologies, I focus on creating solutions that are both functional and visually appealing. I enjoy turning complex problems into elegant, practical solutions, while continuously exploring new technologies and contributing to open-source projects.
-
+              I am a Full Stack MERN Developer and Cloud Consultant specializing in building efficient, scalable, and user-friendly web applications and cloud-native systems. With expertise in React, Node.js, AWS, Azure, and modern web technologies, I focus on creating solutions that are both functional and visually appealing.
               <br /><br />
+              I enjoy turning complex problems into elegant, practical solutions while continuously exploring new cloud technologies and improving application performance.
             </p>
 
             <p className="text-muted-foreground">
               I'm passionate about creating elegant solutions to complex
               problems, and I'm constantly learning new technologies and
               techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              and cloud landscape.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">Get In Touch</a>
-              <a
-                href="src/assets/RESUME.pdf"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                Download CV
-              </a>
             </div>
           </div>
 

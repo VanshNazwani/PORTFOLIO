@@ -21,7 +21,7 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I am a passionate Full Stack Developer with expertise in modern web technologies. I build efficient, scalable applications with a focus on clean code and user experience.
+            I am a Full Stack MERN Developer and Cloud Consultant, building scalable web applications and cloud-native solutions with modern web and cloud technologies.
           </p>
 
           <div className="pt-8">
@@ -78,7 +78,7 @@ export const HeroSection = () => {
 
 {/* LeetCode */}
 <a
-  href="https://leetcode.com/VanshNazwani4705/"
+  href="https://leetcode.com/u/loneprogammer272/"
   target="_blank"
   rel="noopener noreferrer"
   className="relative group"

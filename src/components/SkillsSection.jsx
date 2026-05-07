@@ -22,9 +22,19 @@ const skills = [
   { name: "Docker", icon: "🐳", category: "tools" },
   { name: "Figma", icon: "🎯", category: "tools" },
   { name: "VS Code", icon: "💻", category: "tools" },
+
+  // Cloud
+  { name: "AWS", icon: "☁️", category: "cloud" },
+  { name: "Azure", icon: "🟦", category: "cloud" },
+  { name: "Google Cloud", icon: "☁️", category: "cloud" },
+  { name: "AWS Lambda", icon: "⚙️", category: "cloud" },
+  { name: "Azure DevOps", icon: "🔧", category: "cloud" },
+  { name: "Terraform", icon: "🌍", category: "cloud" },
+  { name: "Kubernetes", icon: "☸️", category: "cloud" },
+  { name: "Serverless", icon: "🚀", category: "cloud" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "tools", "cloud"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

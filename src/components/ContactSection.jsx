@@ -22,11 +22,11 @@ export const ContactSection = () => {
         </p>
 
         {/* UNIQUE CONTACT GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-delay-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-8 animate-fade-in-delay-2">
 
           {/* Email Card */}
-          <div className="bg-card p-6 rounded-xl border border-border shadow-lg hover:shadow-xl transition">
-            <div className="p-3 rounded-full bg-primary/10 w-fit mb-3">
+          <div className="bg-card p-6 rounded-xl border border-border shadow-lg hover:shadow-xl transition text-center">
+            <div className="mx-auto p-3 rounded-full bg-primary/10 w-fit mb-3">
               <Mail className="text-primary h-6 w-6" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Email</h3>
@@ -42,8 +42,8 @@ export const ContactSection = () => {
           </div>
 
           {/* Phone Card */}
-          <div className="bg-card p-6 rounded-xl border border-border shadow-lg hover:shadow-xl transition">
-            <div className="p-3 rounded-full bg-primary/10 w-fit mb-3">
+          <div className="bg-card p-6 rounded-xl border border-border shadow-lg hover:shadow-xl transition text-center">
+            <div className="mx-auto p-3 rounded-full bg-primary/10 w-fit mb-3">
               <Phone className="text-primary h-6 w-6" />
             </div>
             <h3 className="text-xl font-semibold mb-2">Phone</h3>
@@ -56,17 +56,6 @@ export const ContactSection = () => {
             >
               +91 96759 14307
             </a>
-          </div>
-
-          {/* Location Card */}
-          <div className="bg-card p-6 rounded-xl border border-border shadow-lg hover:shadow-xl transition">
-            <div className="p-3 rounded-full bg-primary/10 w-fit mb-3">
-              <MapPin className="text-primary h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Location</h3>
-            <p className="text-muted-foreground">
-              Greater Noida, Uttar Pradesh, India
-            </p>
           </div>
         </div>
 
