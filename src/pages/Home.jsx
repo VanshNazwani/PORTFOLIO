@@ -13,6 +13,30 @@ import { Experience } from "../components/Experience";
 import LeetcodeHeatmap from "../components/LeetcodeHeatmap";
 
 export const Home = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const hash = window.location.hash;
+      // Extract section ID from hash (handles both #section and #/section)
+      const sectionId = hash.replace("#", "").replace(/^\//, "");
+      
+      if (sectionId) {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
+      }
+    };
+
+    // Trigger on hash change
+    window.addEventListener("hashchange", handleScroll);
+    // Trigger on initial load
+    handleScroll();
+
+    return () => window.removeEventListener("hashchange", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden relative">
       <ThemeToggle />
